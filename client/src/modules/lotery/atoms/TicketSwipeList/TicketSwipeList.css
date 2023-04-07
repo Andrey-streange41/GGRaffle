@@ -1,0 +1,20 @@
+.ticket-list {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-bottom: 234px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ticket-list .swiper-slide {
+  width: 340px;
+  height: 540px;
+}
+
+@media (min-width: 640px) {
+  .ticket-list .swiper-slide {
+    width: 426px;
+    height: 575px;
+  }
+}

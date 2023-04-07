@@ -1,0 +1,16 @@
+* {
+  background-repeat: no-repeat;
+}
+
+.blog-container {
+  height: 1500px;
+  width: 100%;
+  background-image: url("../assets/images/bg-geometry.png");
+}
+
+.blog-container .blog-glow {
+  background-image: url("../assets/images/blog-glow.png");
+  height: 842px;
+  width: 500px;
+  background-repeat: no-repeat;
+}

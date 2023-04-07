@@ -1,0 +1,46 @@
+@use '../../../../scss/' as *;
+.cs-go-grid-list {
+    width: 1310px;
+    margin-top: 460px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 240px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    .ticket-wrapp{
+        margin-bottom: 20px;
+    }
+    
+}
+
+.cs-go-grid-wrapper {
+    display: flex;
+    flex-direction: column;
+    @include flex(center, center);
+    width: 100%;
+
+
+    .show-all-button{
+        width: 620px;
+        height: 80px;
+        margin-bottom: 200px;
+        opacity: 0.9;
+        transition: opacity 0.5s ease;
+    
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+
+.rotated{
+    transform: rotateX(180deg);
+}
+
+
+.trapezoid-button { 
+    clip-path: polygon(0 0, 100% 0, 86% 100%, 14% 100%);
+    background: linear-gradient(90deg, #6331F0 18.83%, #238ECB 51.04%, #6331F0 83.45%);
+}

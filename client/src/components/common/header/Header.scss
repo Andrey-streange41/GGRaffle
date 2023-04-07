@@ -1,0 +1,144 @@
+@use "../../../scss/" as *;
+
+header {
+    height: 74px;
+    width: 100%;
+    background-color: $primary-color;
+    color: white;
+    @include flex(center, center);
+    gap: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 100000;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(
+            90deg,
+            #8a77ff 0%,
+            rgba(108, 85, 254, 0.5) 15.1%,
+            rgba(108, 85, 254, 0) 49.48%,
+            rgba(108, 85, 254, 0.5) 83.85%,
+            #8a77ff 100%
+        );
+        filter: blur(2.5px);
+    }
+
+    .logo {
+        cursor: pointer;
+        @media (min-width: 1000px) {
+            & {
+                background-image: url("../../../../public/ggraffles-big.svg");
+                width: 200px;
+                height: 25px;
+            }
+        }
+    }
+
+    .header-nav {
+        gap: 40px;
+        display: none;
+        @media (min-width: 1200px) {
+            & {
+                @include flex(center, center);
+            }
+        }
+        .nav-item {
+            position: relative;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: "Oxanium", cursive;
+        }
+
+        .nav-item::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            transition: width 0.5s ease;
+            height: 2px;
+            background: linear-gradient(
+                90deg,
+                #ae00bf -0.22%,
+                #a318d1 6.78%,
+                #9733e5 16.78%,
+                #8e46f4 25.77%,
+                #8951fc 36.77%,
+                #8755ff 46.76%,
+                #3fa1ff 99.74%
+            );
+        }
+
+        .nav-item:hover::after,
+        .active::after {
+            width: 105%;
+        }
+    }
+
+    .icons-container {
+        @include flex(center, center);
+        gap: 20px;
+        .icon-buttons-section {
+            @include flex(center, center);
+            gap: 8px;
+            @media (min-width: 1000px) {
+                & > div {
+                    width: 80px;
+                    height: 50px;
+                    background-image: url("../../../../public/big-screen-button-blue.svg");
+                }
+            }
+        }
+        .burger-menu {
+            display: block;
+            cursor: pointer;
+            transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+            opacity: 0.9;
+            &:hover {
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                transform: translateY(-1px);
+                opacity: 1;
+            }
+            @media (min-width: 1200px) {
+                & {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 430px) {
+    header {
+        gap: 80px;
+    }
+}
+
+@media (min-width: 520px) {
+    header {
+        justify-content: space-between;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+@media (min-width: 1000px) {
+    header {
+        height: 100px;
+    }
+}
+
+@media (min-width: 1400px) {
+    header {
+        font-size: 1.2em;
+    }
+}

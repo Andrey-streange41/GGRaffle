@@ -1,0 +1,9 @@
+@use '../../../scss/' as *;
+.icon-button {
+  background-image: url("../../../../public/buttonBlue.svg");
+  width: 50px;
+  height: 32px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}

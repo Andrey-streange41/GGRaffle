@@ -1,0 +1,6 @@
+@use '../../../scss/' as *;
+header {
+  height: 74px;
+  width: 100%;
+  background-color: red;
+}

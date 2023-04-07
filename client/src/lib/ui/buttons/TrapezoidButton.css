@@ -1,0 +1,27 @@
+.trapezoid-button {
+  font-family: "Oxanium";
+  font-size: 20px;
+  line-height: 20px;
+  width: 100%;
+  height: 100%;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #d10f84 18.83%, #f756a3 51.04%, #d10f84 83.45%);
+  border-radius: 8px;
+  clip-path: polygon(0 0, 100% 0, 82% 100%, 18% 100%);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.2s ease;
+  opacity: 0.9;
+}
+
+.trapezoid-button:hover {
+  opacity: 1;
+}
+
+@media screen and (min-width: 640px) {
+  .trapezoid-button {
+    font-size: 26px;
+  }
+}

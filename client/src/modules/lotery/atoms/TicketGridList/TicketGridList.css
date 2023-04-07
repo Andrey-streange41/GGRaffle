@@ -1,0 +1,26 @@
+.cs-go-grid-list {
+  width: 1310px;
+  margin-top: 460px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 240px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.cs-go-grid-list .ticket-wrapp {
+  margin-bottom: 20px;
+}
+
+.show-all-button {
+  width: 620px;
+  height: 80px;
+  margin-bottom: 200px;
+  opacity: 0.9;
+  transition: opacity 0.5s ease;
+}
+
+.show-all-button:hover {
+  opacity: 1;
+}

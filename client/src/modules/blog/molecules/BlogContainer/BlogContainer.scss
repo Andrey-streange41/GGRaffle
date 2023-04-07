@@ -1,0 +1,27 @@
+@use "../../../../scss/" as *;
+
+.blog-container {
+    height: 1500px;
+    width: 100%;
+    background-image: url("../../assets/images/bg-geometry.png");
+    @include flex(center, unset);
+    background-repeat: no-repeat;
+    flex-direction: column;
+
+    .blog-glow {
+        background-image: url("../../assets/images/blog-glow.png");
+        height: 500px;
+        width: 842px;
+        background-repeat: no-repeat;
+        @include flex(unset, center);
+        font-family: Oxanium;
+        font-size: 46px;
+        font-weight: 600;
+       
+        img{
+            max-width: 324px;
+            max-height: 46px;
+            margin-top: 94px;
+       }
+    }
+}

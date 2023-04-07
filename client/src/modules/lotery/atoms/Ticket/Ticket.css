@@ -1,0 +1,116 @@
+@use '../../scss/' as*;
+.tikket-card {
+  width: 426px;
+  height: 575px;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  cursor: grab;
+}
+
+.tikket-card .weapon-container {
+  width: 90%;
+  height: 282px;
+  background: linear-gradient(45deg, #b83ef3 0%, #47ccf8 100%);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: inherit;
+}
+
+.tikket-card .weapon-container .vector {
+  position: absolute;
+  left: 3.9%;
+  right: 3.64%;
+  top: 14.89%;
+  bottom: 14.54%;
+}
+
+.tikket-card .weapon-container .days {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 60px;
+  background-image: url("../../../public/expireDays.svg");
+  width: 240px;
+  height: 40px;
+}
+
+.tikket-card .weapon-container .times {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  background-image: url("../../../public/expireTime.svg");
+  background-size: contain;
+  width: 115px;
+  height: 40px;
+}
+
+.tikket-card .ticket-info-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Oxanium", cursive;
+}
+
+.tikket-card .ticket-info-container .ticket-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  width: 386px;
+  margin-top: 28px;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.tikket-card .ticket-info-container .ticket-info span {
+  color: #f8b83c;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.tikket-card .ticket-info-container .one-ticket-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tikket-card .ticket-info-container .one-ticket-info h2 {
+  font-family: "Mulish" cursive;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.tikket-card .ticket-info-container .one-ticket-info span {
+  color: #f8b83c;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.tikket-card .expire-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 386px;
+  margin-top: 15px;
+  font-family: Mulish;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.tikket-card .expire-section span + span {
+  color: #F8B83C;
+}
+
+.tikket-card .trapezzoid-button-wrapperr {
+  position: absolute;
+  bottom: 12px;
+  font-size: 12px;
+  width: 360px;
+  height: 60px;
+}

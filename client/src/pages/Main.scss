@@ -1,0 +1,250 @@
+@use "../scss/" as *;
+
+.main {
+    background: #100f38;
+    width: 100%;
+    min-height: 100vh;
+    right: 0;
+    color: white;
+    @include flex(center, flex-start);
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    .bg-left,
+    .bg-right,
+    .glow,
+    .geometry,
+    .dasheds-left,
+    .dasheds-right,
+    .cs-go-cover {
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+    }
+
+    .bg-left {
+        left: 0px;
+        width: 250px;
+        height: 280px;
+        top: 250px;
+        z-index: 1;
+
+        @media screen and (min-width: 1500px) {
+            background-image: url("../../public/bg/bg3.png");
+            top: 100px;
+            width: 772px;
+            height: 800px;
+        }
+    }
+
+    .dasheds-left {
+        width: 449.18px;
+        height: 95px;
+        left: 0;
+        top: 900.68px;
+        background-image: url("../../public/bg/dasheds-left.png");
+    }
+
+    .dasheds-right {
+        background-image: url("../../public/bg/dasheds-right.png");
+        width: 449.18px;
+        height: 95px;
+        right: 0;
+        top: 900.68px;
+    }
+
+    .dasheds-second {
+        top: 1800px;
+    }
+
+    
+
+    .bg-right {
+        width: 253px;
+        height: 280px;
+        top: 300px;
+        right: 0;
+        z-index: 4;
+
+        @media screen and (min-width: 1500px) {
+            background-image: url("../../public/bg/download.png");
+            right: -20px;
+            top: 100px;
+            width: 772px;
+            height: 800px;
+        }
+    }
+
+    .glow {
+        @media screen and (min-width: 1500px) {
+            background-image: url("../../public/bg/glow.png");
+            top: 220px;
+            width: 60%;
+            height: 1120px;
+            border-radius: 50%;
+            z-index: 2;
+        }
+    }
+
+    .geometry {
+        background-size: cover;
+        top: 0;
+        background-position: center;
+        width: 100%;
+        height: 800px;
+        background-image: url("../../public/bg/geometry.svg");
+
+        @media screen and (min-width: 640px) {
+            width: 100%;
+            height: 1000px;
+        }
+        @media screen and (min-width: 1900px) {
+            width: 90%;
+            height: 1000px;
+        }
+    }
+
+    .play-with-us {
+        margin-top: 156px;
+        width: 285px;
+        height: 120px;
+        line-height: 40px;
+        font-size: 2em;
+        font-family: "Oxanium";
+        font-style: normal;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        z-index: 2;
+
+        @media screen and (min-width: 520px) {
+            margin-top: 156px;
+            width: 300px;
+        }
+        @media screen and (min-width: 640px) {
+            margin-top: calc($header-height + 187px);
+            width: 400px;
+            font-size: 2.5em;
+        }
+        @media screen and (min-width: 767px) {
+            margin-top: 287px;
+            width: 657px;
+            line-height: 56px;
+            font-size: 3em;
+        }
+        /* gradient-h */
+        background: linear-gradient(90deg, #40a0ff -3.75%, #ad02c0 101.03%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .main-descr {
+        margin-top: 271px;
+        margin-bottom: 30px;
+        width: 265px;
+        text-align: center;
+        font-style: normal;
+        font-family: "Oxanium";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #ffffff;
+        z-index: 2;
+
+        @media screen and (min-width: 767px) {
+            margin-top: 50px;
+            margin-bottom: 150px;
+            font-style: 2em;
+            line-height: 35px;
+        }
+    }
+
+    .dont-miss-awesome-section {
+        @include flex(center, center);
+        z-index: 3;
+        flex-direction: column;
+        text-transform: uppercase;
+        margin-top: 110px;
+        margin-bottom: 60px;
+        span:first-child {
+            font-family: "Oxanium";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 32px;
+            background: linear-gradient(90deg, #40a0ff -3.75%, #ad02c0 101.03%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        & > span + span {
+            width: 281px;
+            height: 64px;
+            text-align: center;
+            /* mob/title-block */
+            font-family: "Oxanium";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 32px;
+        }
+
+        @media screen and (min-width: 767px) {
+            margin-top: 220px;
+            margin-bottom: 100px;
+            font-size: 3em;
+            flex-direction: row;
+            gap: 0.2em;
+            span + span {
+                max-width: 600px;
+                width: unset;
+                height: unset;
+            }
+        }
+    }
+
+    .trapezzoid-button-wrapper {
+        height: 60px;
+        width: 286px;
+        z-index: 10;
+
+        @media screen and (min-width: 640px) {
+            width: 600px;
+            height: 100px;
+            span {
+                width: 229px;
+                font-size: 46px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .pick-your-prize {
+        span {
+            font-family: "Oxanium";
+            text-transform: uppercase;
+            font-size: 46px;
+            font-weight: 600;
+        }
+
+        span + span {
+            background: linear-gradient(90deg, #40a0ff -3.75%, #ad02c0 101.03%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+    .pick-your-prize + .pick-your-prize {
+        margin-bottom: 170px;
+    }
+}
+
+.trappezoid-button-red {
+    background: linear-gradient(90deg, #D10F84 18.83%, #F756A3 51.04%, #D10F84 83.45%);
+}
